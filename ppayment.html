@@ -156,6 +156,20 @@
         
         
     }
+    .middle-box-01 table{
+        border: 1px solid;
+        border-collapse: collapse;
+        width: 800px;
+    }
+    
+    .table01{
+        border: 1px solid;
+       
+        border-collapse:collapse; 
+    }
+    .table02{
+        border: 1px solid;
+    }
    
     
     .middle-box-02{
@@ -169,6 +183,13 @@
         border-radius: 20px;
 
 
+
+    }
+    .middle-box-02 table{
+        border: 1px solid;
+        width: 450px;
+        height: 250px;
+        border-radius: 10px;
     }
     .middle-box-03{
         width: 300px;
@@ -193,9 +214,6 @@
     }
 
         
-        
-
-       
        
         
         
@@ -207,7 +225,7 @@
 
 <body>
     <div class ="top-box">
-        <div class="logo"><img src="britishLogo.jpg" width= "200" height="100" alt=""></div>
+        <div class="logo"><a href="index.html" target="_blank"><img src="britishLogo.jpg" width= "200" height="100" alt=""></a></div>
 
         <div class="top-box-1">
             <ul>
@@ -238,21 +256,93 @@
         </div>
 </div>
 
-    <div class = "main-box">
-        <hr>
-        
-        <div class = "middle-box-01">
-            <h2><결제상품 정보></h2>
+<div class = "main-box">
+    <hr>
+    
+    <div class = "middle-box-01">
+        <h2><결제상품 정보></h2>
+        <table> 
 
-        </div>
+            <thead>
+                
+                <tr>
+                    <th class = "table01"><input type="checkbox" name="checkbox" id="check"></th>
+                    <th class = "table01"><span>이미지</span></th>
+                    <th class = "table01" style="width: 450px;">상품정보</th>
+                    <th class = "table01">판매가</th>
+                    <th class = "table01">수량</th>
+                    <th class = "table01">배송비</th>
+                    <th class = "table01">합계</th>
+                    <th class = "table01">선택</th>
+                </tr>
+            </thead>
+            
+            <tbody >
+                <tr>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                    <td class = "table02"><img src="accessory01.jpg" width="40px" height="40px" alt=""></td>
+                    <td class = "table02">악세서리</td>
+                    <td class = "table02"><span>0</span>원</td>
+                    <td class = "table02"><input type="number" style="text-align: right; width: 50px;" min="1" max="99" step="1"; name="number" id="num"></td>
+                    <td class = "table02">2500원</td>
+                    <td class = "table02">0</td>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                </tr>
+                <tr>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                    <td class = "table02"><img src="accessory02.jpg" width="40px" height="40px" alt=""></td>
+                    <td class = "table02">악세서리</td>
+                    <td class = "table02"><span>0</span>원</td>
+                    <td class = "table02"><input type="number" style="text-align: right; width: 50px;" min="1" max="99" step="1"; name="number" id="num"></td>
+                    <td class = "table02">2500원</td>
+                    <td class = "table02">0</td>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                </tr>
+                
 
-        <div class = "middle-box-02">
-            <h2><결제수단 선택></h2>
 
-        </div>
+            </tbody>
+
+            
+        </table>
+       
+
+    </div>
+
+    <div class = "middle-box-02">
+        <h2><결제수단 선택></h2>
+
+        <table border="1"> 
+            <tr>결제수단
+                <td>결제방법</td>
+                <td>
+                    <input type="radio" name="payment" id="payment"> 실시간 결제이체 <br>
+                    <input type="radio" name="payment" id="payment"> 카카오 페이 <br>
+                    <input type="radio" name="payment" id="payment"> 휴대폰 결제 <br>
+                    <input type="radio" name="payment" id="payment"> 무통장 입금 <br>
+                    <input type="radio" name="payment" id="payment"> 신용카드 <br>
+                </tr>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
 
         <div class = "middle-box-03">
             <h2><총 결제금액></h2>
+
+            
+                <td>총 결제 금액</td>
+                <td>
+
+                    <input type="text" name="money"> 원
+
+                </tr>
+                </td>
+            </tr>
+
+            
 
         </div>
        

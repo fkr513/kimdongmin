@@ -133,13 +133,14 @@
     .middle-box-01 h1{
         width: 960px;
         border-bottom: 1px solid;
-        
+        border: 1px solid;
         border-width: 5px;
         margin-bottom: 50px;
 
         
         
     }
+
     
     
     .middle-box-01{
@@ -156,6 +157,22 @@
         
         
     }
+    .middle-box-01 table{
+        border: 1px solid;
+        border-collapse: collapse;
+        width: 800px;
+    }
+    
+    .table01{
+        border: 1px solid;
+       
+        border-collapse:collapse; 
+    }
+    .table02{
+        border: 1px solid;
+    }
+
+        
    
     
     .middle-box-02{
@@ -170,6 +187,51 @@
 
 
     }
+    .middle{
+        width: 960px;
+        height: 390px;
+        display: inline-block;
+
+
+    }
+    .middle li{
+        width: 800px;
+        border-bottom: 1px solid black;
+        line-height: 30px;
+    }
+    .middle li:first-child{
+        border-top: 2px solid;
+    }
+    .middle li:last-child{
+        border-bottom: 2px solid;
+    }
+
+    .middle>input{
+        display: inline-block;
+    }
+    .lab{
+        width: 100px;
+        margin: 2px;
+        display: inline-block;
+        
+        font-family: 'Hina Mincho', serif;
+        font-weight: 700;
+        text-align: center;
+        text-shadow: 1px;
+
+        
+    }
+    .button01{
+        margin-left: 10px;
+    }
+    .s-2{
+        width: 100px;
+    }
+    .s-3{
+        width: 600px;
+    }
+
+
 
     .footer button{
         width: 150px;
@@ -198,7 +260,7 @@
 <body>
 
     <div class ="top-box">
-        <div class="logo"><img src="britishLogo.jpg" width= "200" height="100" alt=""></div>
+        <div class="logo"><a href="index.html" target="_blank"><img src="britishLogo.jpg" width= "200" height="100" alt=""></a></div>
 
         <div class="top-box-1">
             <ul>
@@ -230,24 +292,97 @@
 </div>
 
 
-    <div class = "main-box">
-        <hr>
+<div class = "main-box">
+    <hr>
+    
+    <div class = "middle-box-01">
+        <h2><장바구니></h2><br>
+        <table border="1"> 
+
+            <thead>
+                
+                <tr>
+                    <th class = "table01"><input type="checkbox" name="checkbox" id="check"></th>
+                    <th class = "table01"><span>이미지</span></th>
+                    <th class = "table01" style="width: 450px;">상품정보</th>
+                    <th class = "table01">판매가</th>
+                    <th class = "table01">수량</th>
+                    <th class = "table01">배송비</th>
+                    <th class = "table01">합계</th>
+                    <th class = "table01">선택</th>
+                </tr>
+            </thead>
+            
+            <tbody >
+                <tr>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                    <td class = "table02"><img src="accessory01.jpg" width="40px" height="40px" alt=""></td>
+                    <td class = "table02">악세서리</td>
+                    <td class = "table02"><span>0</span>원</td>
+                    <td class = "table02"><input type="number" style="text-align: right; width: 50px;" min="1" max="99" step="1"; name="number" id="num"></td>
+                    <td class = "table02">2500원</td>
+                    <td class = "table02">0</td>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                </tr>
+                <tr>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                    <td class = "table02"><img src="accessory02.jpg" width="40px" height="40px" alt=""></td>
+                    <td class = "table02">악세서리</td>
+                    <td class = "table02"><span>0</span>원</td>
+                    <td class = "table02"><input type="number" style="text-align: right; width: 50px;" min="1" max="99" step="1"; name="number" id="num"></td>
+                    <td class = "table02">2500원</td>
+                    <td class = "table02">0</td>
+                    <td class = "table02"><input type="checkbox" name="checkbox" id="check"></td>
+                </tr>
+                
+
+
+            </tbody>
+
+            
+        </table>
+       
+
+
+
         
-        <div class = "middle-box-01">
-            <h2><장바구니></h2>
 
-        </div>
+    </div>
 
-        <div class = "middle-box-02">
-            <h2><주문자 정보확인></h2>
-
-        </div>
-       
-       
+    <div class = "middle-box-02">
+        <h2><주문자 정보확인></h2>
+        <form action="" method="post">
+            <div id="top">
+                
+            </div>
+            <div class="middle">
+                <ul>
+                    <li><span class="lab">이름</span><input type="text" class="s-1" name="name" id="name"></li>                 
+                    <li><span class="lab">생년월일</span><input type="date" class="" name="birth" id="birth"></li> 
+                    <li><span class="lab">휴대번호</span>
+                        <input type="text" class="s-2" name="phone" id="phone1"> - 
+                        <input type="text" class="s-2" name="phone" id="phone2"> -
+                        <input type="text" class="s-2" name="phone" id="phone3"></li>
+                    <li><span class="lab">이메일</span>
+                        <input type="text" class="s-2" name="email" id="email1"> -
+                        <input type="text" class="s-2" name="email" id="email2"></li>
+                    <li><span class="lab">우편번호</span><input type="text" class="" name="post" id="post"><button class = "button01">우편번호찾기</button></li>
+                    <li><span class="lab">주소</span><input type="text" class="s-3" name="addr" id="addr"></li>
+                    <li><span class="lab">상세주소</span><input type="text" class="s-3" name="addr01" id="addr01"></li>
+                    
+                </ul>
+            </div>
+            <div class="bottom"><input type="submit" value="회원가입" name="submit" id="submit"></div>
+        
+        
+        
+        
+        </form>
 
 
 
     </div>
+   
 
     <footer class = "footer">
         <hr>
